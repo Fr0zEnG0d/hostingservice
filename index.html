@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hosting Service</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Imagem de background */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("images/background.jpg");
+  min-height: 100%;
+}
+
+.ls-bar .ls-button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+    <!-- Barra de navegação -->
+<div class="ls-top">
+    <div class="ls-bar ls-white ls-card" id="myNavbar">
+      <a href="index.html" class="ls-bar-item ls-button ls-wide">HOSTING SERVICE</a>
+      <!-- Links do menú à direita -->
+      <div class="ls-right ls-hide-small">
+        <a href="sobre.html" class="ls-bar-item ls-button">SOBRE</a>
+        <a href="trabalho.html" class="ls-bar-item ls-button"><i class="fa fa-th"></i> TRABALHOS</a>
+        <a href="preco.html" class="ls-bar-item ls-button"><i class="fa fa-eur"></i> PREÇOS</a>
+        <a href="contactos.html" class="ls-bar-item ls-button"><i class="fa fa-envelope"></i> CONTACTOS</a>
+      </div>
+      <!-- Ocultar links do menu à direita em ecrãs pequenos e substituí-los por um ícone de menu -->
+      <a href="javascript:void(0)" class="ls-bar-item ls-button ls-right ls-hide-large ls-hide-medium" onclick="ls_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Barra lateral em telas pequenas ao clicar no ícone do menu -->
+  <nav class="ls-sidebar ls-bar-block ls-black ls-card ls-animate-left ls-hide-medium ls-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="ls_close()" class="ls-bar-item ls-button ls-large ls-padding-16">Fechar ×</a>
+    <a href="sobre.html" onclick="ls_close()" class="ls-bar-item ls-button">SOBRE</a>
+    <a href="trabalho.html" onclick="ls_close()" class="ls-bar-item ls-button">TRABALHOS</a>
+    <a href="preco.html" onclick="ls_close()" class="ls-bar-item ls-button">PREÇOS</a>
+    <a href="contactos.html" onclick="ls_close()" class="ls-bar-item ls-button">CONTACTOS</a>
+  </nav>
+  
+  <!-- Texto da página principal -->
+  <header class="bgimg-1 ls-display-container ls-grayscale-min" id="home">
+    <div class="ls-centertext ls-text-white" style="padding-top:330px">
+      <span class="ls-jumbo ls-hide-small">Alojamos os seus serviços</span><br>
+      <span class="ls-xxlarge ls-hide-large ls-hide-medium">Alojamos os seus serviços</span><br>
+      <span class="ls-large">Pare de procurar, garantimos a melhor qualidade do mercado</span>
+    </div> 
+  </header>
+
+<!-- Rodapé -->
+<footer class="ls-center ls-black ls-padding-64">
+  <a href="#home" class="ls-button ls-light-grey"><i class="fa fa-arrow-up ls-margin-right"></i>Início</a>
+  <div class="ls-xlarge ls-section">
+    <i class="fa fa-facebook-official ls-hover-opacity"></i>
+    <i class="fa fa-instagram ls-hover-opacity"></i>
+    <i class="fa fa-snapchat ls-hover-opacity"></i>
+    <i class="fa fa-pinterest-p ls-hover-opacity"></i>
+    <i class="fa fa-twitter ls-hover-opacity"></i>
+    <i class="fa fa-linkedin ls-hover-opacity"></i>
+  </div>
+  <p>Desenvolvido por Luís Santos</p>
+</footer>
+
+
+<script>
+  
+  // Alterna entre mostrar e ocultar a barra lateral ao clicar no ícone do menu
+  var mySidebar = document.getElementById("mySidebar");
+  
+  function ls_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+  
+  // Fecha a barra lateral com o botão Fechar
+  function ls_close() {
+      mySidebar.style.display = "none";
+  }
+  </script>
+
+</body>
+
+<!------------------------------------------------------------------------------------>
+<!-- 
+   - As marcas <title> utilizadas em todas as páginas é utilizada para adicionar o titulo na aba do browser
+   - As marcas <meta> foram utilizadas para indicar o tipo de caracteres utilizados na página
+   - As marcas <link> foram utilizadas para referenciar um documento externo por exemplo o font-awesome para poder utilizar icones na página.
+   - A marca <style> foi utilizada para fazer uma alteração interna no aspecto da página.
+   - A classe bgimg-1 foi utilizada para configurar a imagem de fundo da página inicial.
+   - As classes ls-top, ls-bar, ls-white, ls-card, ls-bar-item, ls-button, ls-wide, ls-right são utilizados para configurar a barra de menú superior.
+   - As classes ls-sidebar, ls-bar-block, ls-black, ls-animate-left, ls-hide-medium, ls-hide-large, ls-padding-16 são utilizadas para criar o menú lateral quando o ecrã é pequeno.
+   - A marca <nav> é utilizada para criar uma secção cuja finalidade é fornecer vários links de navegação.
+   - A chamada da função onclick="ls_close() é utilizada para ao clicar fechar o menú lateral.
+   - A marca <header> indica o inicio do cabeçalho da página.
+   - Para criar o cabeçalho foram criadas as classes bgimg-1, ls-display-container, ls-grayscale-min, ls-centertext, ls-text-white, ls-jumbo, ls-hide-small, ls-xxlarge e ls-large.
+   - A marca <footer> foi utilizada para criar o rodapé da página.
+   - As classes ls-center, ls-padding-64, ls-light-grey, ls-margin-right, ls-section e ls-hover-opacity foram utilizadas para criar o rodapé da página.
+   - A marca <p> é utilizada para criar um parágrafo com o texto "Desenvolvido por Luís Santos"
+   - A marca <script> foi utilizada para criar duas funções javascript "ls_open" para abrir e "ls_close" para fechar o menu lateral.
+
+   - Foram criadas classes especificamente para o uso de redimensionamento de acordo com o tamanho do ecrã do utilizador sendo estas: ls-hide-medium, ls-hide-large, ls-sidebar, ls-collapse, ls-hide-small, ls-button, ls-quarter, ls-third e ls-col.m6.
+ -->

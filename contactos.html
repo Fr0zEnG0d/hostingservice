@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hosting Service</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+.ls-bar .ls-button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+    <!-- Barra de navegação -->
+<div class="ls-top">
+    <div class="ls-bar ls-white ls-card" id="myNavbar">
+      <a href="index.html" class="ls-bar-item ls-button ls-wide">HOSTING SERVICE</a>
+      <!-- Links do menú à direita -->
+      <div class="ls-right ls-hide-small">
+        <a href="sobre.html" class="ls-bar-item ls-button">SOBRE</a>
+        <a href="trabalho.html" class="ls-bar-item ls-button"><i class="fa fa-th"></i> TRABALHOS</a>
+        <a href="preco.html" class="ls-bar-item ls-button"><i class="fa fa-eur"></i> PREÇOS</a>
+        <a href="contactos.html" class="ls-bar-item ls-button"><i class="fa fa-envelope"></i> CONTACTOS</a>
+      </div>
+      <!-- Ocultar links do menu à direita em ecrãs pequenos e substituí-los por um ícone de menu -->
+      <a href="javascript:void(0)" class="ls-bar-item ls-button ls-right ls-hide-large ls-hide-medium" onclick="ls_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Barra lateral em telas pequenas ao clicar no ícone do menu -->
+  <nav class="ls-sidebar ls-bar-block ls-black ls-card ls-animate-left ls-hide-medium ls-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="ls_close()" class="ls-bar-item ls-button ls-large ls-padding-16">Fechar ×</a>
+    <a href="sobre.html" onclick="ls_close()" class="ls-bar-item ls-button">SOBRE</a>
+    <a href="trabalho.html" onclick="ls_close()" class="ls-bar-item ls-button">TRABALHOS</a>
+    <a href="preco.html" onclick="ls_close()" class="ls-bar-item ls-button">PREÇOS</a>
+    <a href="contactos.html" onclick="ls_close()" class="ls-bar-item ls-button">CONTACTOS</a>
+  </nav>
+
+  <!-- Seção de contato -->
+<div class="ls-container ls-light-grey" style="padding:128px 16px" id="contacto">
+    <h3 class="ls-center">CONTACTO</h3>
+    <p class="ls-center ls-large">Vamos entrar em contato. Envie-nos uma mensagem:</p>
+    <div style="margin-top:48px">
+      <p><i class="fa fa-map-marker fa-fw ls-xxlarge ls-margin-right"></i> Portugal, PT</p>
+      <p><i class="fa fa-phone fa-fw ls-xxlarge ls-margin-right"></i> Telemóvel: +351 919191919</p>
+      <p><i class="fa fa-envelope fa-fw ls-xxlarge ls-margin-right"> </i> Email: mail@mail.com</p>
+      <br>
+      <form action="/index.html" target="_blank">
+        <p><input class="ls-input ls-border" type="text" placeholder="Nome" required name="Name"></p>
+        <p><input class="ls-input ls-border" type="text" placeholder="Email" required name="Email"></p>
+        <p><input class="ls-input ls-border" type="text" placeholder="Assunto" required name="Subject"></p>
+        <p><input class="ls-input ls-border" type="text" placeholder="Mensagem" required name="Message"></p>
+        <p>
+          <button class="ls-button ls-black" type="submit">
+            <i class="fa fa-paper-plane"></i> ENVIAR MENSAGEM
+          </button>
+        </p>
+      </form>
+      <!-- Imagem do local/mapa -->
+      <img src="images/gps.jpg" class="ls-image ls-greyscale" style="width:100%;margin-top:48px">
+    </div>
+  </div>
+
+<!-- Rodapé -->
+<footer class="ls-center ls-black ls-padding-64">
+  <a href="#contacto" class="ls-button ls-light-grey"><i class="fa fa-arrow-up ls-margin-right"></i>Início</a>
+  <div class="ls-xlarge ls-section">
+    <i class="fa fa-facebook-official ls-hover-opacity"></i>
+    <i class="fa fa-instagram ls-hover-opacity"></i>
+    <i class="fa fa-snapchat ls-hover-opacity"></i>
+    <i class="fa fa-pinterest-p ls-hover-opacity"></i>
+    <i class="fa fa-twitter ls-hover-opacity"></i>
+    <i class="fa fa-linkedin ls-hover-opacity"></i>
+  </div>
+  <p>Desenvolvido por Luís Santos</p>
+</footer>
+
+
+<script>
+  
+  // Alterna entre mostrar e ocultar a barra lateral ao clicar no ícone do menu
+  var mySidebar = document.getElementById("mySidebar");
+  
+  function ls_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+  
+  // Fecha a barra lateral com o botão Fechar
+  function ls_close() {
+      mySidebar.style.display = "none";
+  }
+  </script>
+
+</body>
+
+<!------------------------------------------------------------------------------------>
+<!-- 
+   - As unicas alterações neste ficheiro relativamente ao index.html foi a parte "Contato"
+   - Para criar a secção "Contato" foi criado para elém das já existentes as classes: ls-input, ls-border, ls-greyscale
+ -->

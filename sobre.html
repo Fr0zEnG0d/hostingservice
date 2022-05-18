@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hosting Service</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+.ls-bar .ls-button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+    <!-- Barra de navegação -->
+<div class="ls-top">
+    <div class="ls-bar ls-white ls-card" id="myNavbar">
+      <a href="index.html" class="ls-bar-item ls-button ls-wide">HOSTING SERVICE</a>
+      <!-- Links do menú à direita -->
+      <div class="ls-right ls-hide-small">
+        <a href="sobre.html" class="ls-bar-item ls-button">SOBRE</a>
+        <a href="trabalho.html" class="ls-bar-item ls-button"><i class="fa fa-th"></i> TRABALHOS</a>
+        <a href="preco.html" class="ls-bar-item ls-button"><i class="fa fa-eur"></i> PREÇOS</a>
+        <a href="contactos.html" class="ls-bar-item ls-button"><i class="fa fa-envelope"></i> CONTACTOS</a>
+      </div>
+      <!-- Ocultar links do menu à direita em ecrãs pequenos e substituí-los por um ícone de menu -->
+      <a href="javascript:void(0)" class="ls-bar-item ls-button ls-right ls-hide-large ls-hide-medium" onclick="ls_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Barra lateral em telas pequenas ao clicar no ícone do menu -->
+  <nav class="ls-sidebar ls-bar-block ls-black ls-card ls-animate-left ls-hide-medium ls-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="ls_close()" class="ls-bar-item ls-button ls-large ls-padding-16">Fechar ×</a>
+    <a href="sobre.html" onclick="ls_close()" class="ls-bar-item ls-button">SOBRE</a>
+    <a href="trabalho.html" onclick="ls_close()" class="ls-bar-item ls-button">TRABALHOS</a>
+    <a href="preco.html" onclick="ls_close()" class="ls-bar-item ls-button">PREÇOS</a>
+    <a href="contactos.html" onclick="ls_close()" class="ls-bar-item ls-button">CONTACTOS</a>
+  </nav>
+  
+  <!-- Secção Sobre -->
+<div class="ls-container" style="padding:128px 16px" id="about">
+    <h3 class="ls-center">SOBRE A NOSSA EMPRESA</h3>
+    <p class="ls-center ls-large">Principais características da nossa empresa</p>
+    <div class="ls-row-padding ls-center" style="margin-top:64px">
+      <div class="ls-quarter">
+        <i class="fa fa-desktop ls-margin-bottom ls-jumbo ls-center"></i>
+        <p class="ls-large">Responsivo</p>
+        <p>Todos os nossos serviços estão disponíveis em qualquer ecrã.</p>
+      </div>
+      <div class="ls-quarter">
+        <i class="fa fa-heart ls-margin-bottom ls-jumbo"></i>
+        <p class="ls-large">Paixão</p>
+        <p>Todos os nossos serviços são feitos com amor e dedicação.</p>
+      </div>
+      <div class="ls-quarter">
+        <i class="fa fa-diamond ls-margin-bottom ls-jumbo"></i>
+        <p class="ls-large">Design</p>
+        <p>O design é o nosso forte para que se sinta em casa.</p>
+      </div>
+      <div class="ls-quarter">
+        <i class="fa fa-cog ls-margin-bottom ls-jumbo"></i>
+        <p class="ls-large">Suporte</p>
+        <p>Pode contar com o melhor suporte técnico 24/7.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Secção "Nós conhecemos o design" -->
+  <div class="ls-container ls-light-grey" style="padding:128px 16px">
+    <div class="ls-row-padding">
+      <div class="ls-col m6">
+        <h3>Nós conhecemos o design.</h3>
+        <p>Contamos com a melhor equipa de designers para o poder auxiliar sempre que necessitar,<br>entre em contacto connosco.</p>
+        <p><a href="contactos.html" class="ls-button ls-black"><i class="fa fa-envelope"> </i> Contacte-nos</a></p>
+      </div>
+      <div class="ls-col m6">
+        <img class="ls-image ls-round-large" src="images/designer.jpg" alt="Designer" width="700" height="394">
+      </div>
+    </div>
+  </div>
+
+<!-- Rodapé -->
+<footer class="ls-center ls-black ls-padding-64">
+  <a href="#about" class="ls-button ls-light-grey"><i class="fa fa-arrow-up ls-margin-right"></i>Início</a>
+  <div class="ls-xlarge ls-section">
+    <i class="fa fa-facebook-official ls-hover-opacity"></i>
+    <i class="fa fa-instagram ls-hover-opacity"></i>
+    <i class="fa fa-snapchat ls-hover-opacity"></i>
+    <i class="fa fa-pinterest-p ls-hover-opacity"></i>
+    <i class="fa fa-twitter ls-hover-opacity"></i>
+    <i class="fa fa-linkedin ls-hover-opacity"></i>
+  </div>
+  <p>Desenvolvido por Luís Santos</p>
+</footer>
+
+
+<script>
+  
+  // Alterna entre mostrar e ocultar a barra lateral ao clicar no ícone do menu
+  var mySidebar = document.getElementById("mySidebar");
+  
+  function ls_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+  
+  // Fecha a barra lateral com o botão Fechar
+  function ls_close() {
+      mySidebar.style.display = "none";
+  }
+  </script>
+
+</body>
+
+<!------------------------------------------------------------------------------------>
+<!-- 
+   - As unicas alterações neste ficheiro relativamente ao index.html são as partes "Seção Sobre" e "Nós conhecemos o design"
+   - Para a criação da secção "Sobre" foram utilzadas diversas marcas tais como grupo <div>, cabeçalhos <h3>, paragrafos <p>, itálico <i>
+   - As novas classes utilizadas para essa secção foram ls-container, ls-row-padding, ls-quarter e ls-margin-bottom para criar uma divisão especifica para esse assunto.
+   - Já na secção "Nós conhecemos o design" apenas foram utilizados três novas classes que foram ls-image, ls-round-large e ls-col.m6 a primeira server para especificar o tamanho da imagem, a segunda server para arredondar os cantos da imagem e a terceira cria duas colunas uma para a imagem e outra para o conteudo descrito dividindo o ecrã em duas partes.
+ -->
